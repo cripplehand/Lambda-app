@@ -24,7 +24,7 @@
 ## Functie 2
 
 ## Functie 3
-
+(1) van opdrachten niet te begrijpen.
 ## Functie 4
 STUDENT ONLY:
     (Indien) studiebehoefte niet volledig is, kan exterene kenniselkementen gezocht worden (minors/courses) (2)
