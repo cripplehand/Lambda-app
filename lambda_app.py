@@ -4,11 +4,16 @@
 
 # Imports
 
-# Defs
-
-# Inilization
-
 # Program
 
-print("Hoi Camiel. Ik weet het. Waarom Lambda_app? Idk vind grieks alphabet wel leuk. MS klinkt zo gay.")
+# Groet gebruiker tot de applicatie.
+
+# Login scherm
+
+# Indien SLB = toon slb functies
+
+# Indien STUDENT = toon student functies
+
+# Update?
+
 
