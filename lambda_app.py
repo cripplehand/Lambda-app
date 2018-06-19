@@ -10,10 +10,10 @@
 
 # Login scherm
 
-# Indien SLB = toon slb functies
+# Valideren
+## Indien SLB = toon slb functies
+## Indien STUDENT = toon student functies
 
-# Indien STUDENT = toon student functies
 
-# Update?
 
 
