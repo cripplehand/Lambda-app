@@ -26,10 +26,13 @@
 ## Functie 3
 
 ## Functie 4
-
+STUDENT ONLY:
+    (Indien) studiebehoefte niet volledig is, kan exterene kenniselkementen gezocht worden (minors/courses) (2)
 ## Functie 5
-
+STUDENT ONLY:
+    het verkrijgen van een overzicht van wat hij/zij wilt volgen in het komend blok. (3)
 ## Functie 6
-
+SLB ONLY!:
+    goedkeuren/afkeuren voorlopige studiepad (4)
 
 
