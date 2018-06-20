@@ -20,11 +20,12 @@
 ### Afsluiten
 
 ## Functie 1
-
+Opvragen aanbod onderwijseenheden (1a)
 ## Functie 2
-
+Opvragen aanbod onderwijseenheden extern (1a)
 ## Functie 3
-(1) van opdrachten niet te begrijpen.
+STUDENT ONLY:
+        invullen studieboefte op basis van de onderwijseenheden die beschikbaar zijn (kenniselementen)
 ## Functie 4
 STUDENT ONLY:
     (Indien) studiebehoefte niet volledig is, kan exterene kenniselkementen gezocht worden (minors/courses) (2)
@@ -34,5 +35,7 @@ STUDENT ONLY:
 ## Functie 6
 SLB ONLY!:
     goedkeuren/afkeuren voorlopige studiepad (4)
+## Functie 7
+    Inzien van de gemaakte studieplan
 
 
