@@ -31,7 +31,27 @@ Druk op enter om naar het inlog scherm te gaan.
 """)
 
 def login():
-    print("login kut")
+    print("""
+
+
++---------------------------------------------------------------------+
+|                                                                     |
+|  Login met je gebruikers naam en wachtwoord die je                  |
+|                                                                     |
+|  Voorbeeld van een gebruikersnaam: bram.sonsbeek123456              |
+|  Het wachtwoord dien je zelf te weten, anders kun je deze           |
+|                                                                     |  
+|  Resetten via het betreffende van hogeschool ZUYD.                  |
+|  Tevens kan een student zijn studiebehoeftes invullen.              |
+|                                                                     |
++---------------------------------------------------------------------+
+
+
+
+Vul je gebruikersnaam in. Vervolgens druk op enter. Voer dan je
+wachtwoord in. Indien je deze fout hebt wordt de invoer hier getoont.
++---------------------------------------------------------------------+
+""")
 
 
 def mainmenu_student():
@@ -106,4 +126,6 @@ Kies uit: 0,1,2,3,4 of 5
 #  mainmenu_student()
 #  input()
 #  mainmenu_slb()
+#  input()
+#  login()
 #  input()
