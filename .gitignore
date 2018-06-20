@@ -1,0 +1,4 @@
+*__pycache__*
+*.vs
+*Lambda-app.pyproj
+*Lambda-app.sln
