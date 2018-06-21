@@ -29,6 +29,7 @@ Druk op enter om naar het inlog scherm te gaan.
 +---------------------------------------------------------------------+
 """)
 
+
 def login():
     print("""
 
@@ -39,7 +40,7 @@ def login():
 |                                                                     |
 |  Voorbeeld van een gebruikersnaam: bram.sonsbeek123456              |
 |  Het wachtwoord dien je zelf te weten, anders kun je deze           |
-|                                                                     |  
+|                                                                     |
 |  Resetten via het betreffende van hogeschool ZUYD.                  |
 |  Tevens kan een student zijn studiebehoeftes invullen.              |
 |                                                                     |
@@ -127,14 +128,3 @@ def mainmenu_slb():
 Kies uit: 0,1,2,3,4 of 5
 +---------------------------------------------------------------------+
 """)
-
-
-#  input()
-#  welcome()
-#  input()
-#  mainmenu_student()
-#  input()
-#  mainmenu_slb()
-#  input()
-#  login()
-#  input()
