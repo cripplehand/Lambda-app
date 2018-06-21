@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 # Conform PEP8 http://pep8online.com/
 
@@ -50,6 +49,16 @@ def login():
 
 Vul je gebruikersnaam in. Vervolgens druk op enter. Voer dan je
 wachtwoord in. Indien je deze fout hebt wordt de invoer hier getoont.
++---------------------------------------------------------------------+
+""")
+
+
+def login_fail():
+    print("""
+
+
+Het ingevulde wachtwoord of gebruikersnaam is onjuist.
+Druk op enter om opnieuw in te loggen.
 +---------------------------------------------------------------------+
 """)
 
