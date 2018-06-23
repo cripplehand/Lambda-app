@@ -11,6 +11,7 @@ from lambda_app_UI import * # Importeren menu's (UI)
 # Groet gebruiker tot de applicatie.
 welcome()
 input()
+input()
 # Login scherm
 login()
 username = input()
@@ -41,6 +42,8 @@ password = input()
 ## Functie 6
 ###SLB ONLY!:
 ###    goedkeuren/afkeuren voorlopige studiepad (4)
+
+
 
 
 
