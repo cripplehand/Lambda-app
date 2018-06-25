@@ -7,7 +7,7 @@ import sqlite3
 from lambda_app_UI import * # Importeren menu's (UI)
 
 
-# Program
+# Program 
 
 # Groet gebruiker tot de applicatie.
 welcome()
