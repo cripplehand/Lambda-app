@@ -3,6 +3,7 @@
 # Conform PEP8 http://pep8online.com/
 
 # Imports
+import sqlite3
 from lambda_app_UI import * # Importeren menu's (UI)
 
 
@@ -22,6 +23,53 @@ password = input()
 ## Indien STUDENT = toon student functies
 
 # Toon menu op basis van functies
+
+def aanmaken_db():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS gebruiker(
+    userID INTEGER PRIMARY KEY, 
+    gebruikersnaam VARCHAR(20) NOT NULL,
+    voornaam VARCHAR(20) NOT NULL,
+    achternaam VARCHAR(20) NOT NULL,
+    wachtwoord VARCHAR(20) NOT NULL);
+    ''')
+    
+    cursor.execute('''
+    INSERT INTO gebruiker(gebruikersnaam,voornaam,achternaam,wachtwoord)
+    VALUES ('test_gebruiker','Bob','Snith','vogel')
+    ''')
+
+    db.commit()
+
+    cursor.execute('SELECT * FROM gebruiker')
+    print(cursor.fetchall())
+
+def login():
+    while True:
+        gebruikersnaam = input('Vul u gebruikersnaam in: ')
+        wachtwoord = input('Vul u wachtwoord in: ')
+        with sqlite3.connect('studie.db') as db:
+            cursor = db.cursor()
+        find_user = ('SELECT * FROM gebruiker WHERE gebruikersnaam = ? AND wachtwoord = ?')
+        cursor.execute(find_user,[(gebruikersnaam),(wachtwoord)])
+        results = cursor.fetchall()
+
+        if results:
+            for i in results:
+                print('Welkom '+i[2])
+            return ('Exit')
+        else:
+            print('gebruikersnaam en wachtwoord zijn niet correct')
+            again = input('Wilt u opnieuw proberen? (y/n): ')
+            if again.lower() == 'n':
+                print('doei')
+                time.sleep(1)
+                return('Exit')
+
+login()
 
 ## Functie 0
 ### Afsluiten
