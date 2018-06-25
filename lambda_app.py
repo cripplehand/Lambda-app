@@ -12,12 +12,8 @@ from lambda_app_UI import * # Importeren menu's (UI)
 # Groet gebruiker tot de applicatie.
 welcome()
 input()
-input()
 # Login scherm
 login()
-username = input()
-password = input()
-
 # Valideren
 ## Indien SLB = toon slb functies
 ## Indien STUDENT = toon student functies
