@@ -67,13 +67,57 @@ def login():
 
 login()
 
+
+def get_modulesprop():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM modules_propedeuse  ")
+        print(cursor.fetchall())
+
+get_modulesprop()
+
+def get_modulesBI():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM modules_BI  ")
+        print(cursor.fetchall())
+
+get_modulesBI()
+
+
+def get_modulesDEV():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM modules_DEV  ")
+        print(cursor.fetchall())
+
+get_modulesDEV()
+
+
+def get_modulesSERV():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM modules_SERV  ")
+        print(cursor.fetchall())
+
+get_modulesSERV()
+
+
+def get_minors():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM externe_modules ")
+        print(cursor.fetchall())
+
+get_minors()
+
 ## Functie 0
-### Afsluiten
+### Afsluiten *
 
 ## Functie 1
-###Opvragen aanbod onderwijseenheden (1a)
+###Opvragen aanbod onderwijseenheden (1a) *
 ## Functie 2
-###Opvragen aanbod onderwijseenheden extern (1a)
+###Opvragen aanbod onderwijseenheden extern (1a) *
 ## Functie 3
 ###STUDENT ONLY:
 ###        invullen studieboefte op basis van de onderwijseenheden die beschikbaar zijn (kenniselementen)
