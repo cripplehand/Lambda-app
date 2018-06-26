@@ -52,7 +52,7 @@ def login():
         find_user = ('SELECT * FROM gebruiker WHERE gebruikersnaam = ? AND wachtwoord = ?')
         cursor.execute(find_user,[(gebruikersnaam),(wachtwoord)])
         results = cursor.fetchall()
-
+        print(results)
         if results:
             for i in results:
                 print('Welkom '+i[2])
