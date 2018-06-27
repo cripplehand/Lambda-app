@@ -137,7 +137,89 @@ def studiebehoefteB1():
     db.commit()
 
 
-studiebehoefteB1()
+#studiebehoefteB1()
+
+
+def studiebehoefteB2():
+    found = 0 
+    while found==0:
+        studentnummer = input('Vul je studentnummer in')   
+        with sqlite3.connect('studie.db') as db:
+            cursor = db.cursor()
+            find_user = ('SELECT * FROM studieplanB2 WHERE studentnummer = ?')
+            cursor.execute(find_user,[(studentnummer)])
+
+            if cursor.fetchall():
+                print('studentnummer is niet correct')
+            else:
+                found = 1 
+
+    vak_1 = input('Vul je eerste vak in: ')
+    vak_2 = input('Vul je tweede vak in:')
+    vak_3 = input('Vul je derde vak in: ')
+    
+
+    insertData = '''INSERT INTO studieplanB2(studentnummer,vak_1,vak_2,vak_3)
+    VALUES(?,?,?,?)''' 
+    cursor.execute(insertData, [(studentnummer),(vak_1),(vak_2),(vak_3)])
+    db.commit()
+
+#studiebehoefteB2()
+
+def studiebehoefteB3():
+    found = 0 
+    while found==0:
+        studentnummer = input('Vul je studentnummer in')   
+        with sqlite3.connect('studie.db') as db:
+            cursor = db.cursor()
+            find_user = ('SELECT * FROM studieplanB3 WHERE studentnummer = ?')
+            cursor.execute(find_user,[(studentnummer)])
+
+            if cursor.fetchall():
+                print('studentnummer is niet correct')
+            else:
+                found = 1 
+
+    vak_1 = input('Vul je eerste vak in: ')
+    vak_2 = input('Vul je tweede vak in:')
+    vak_3 = input('Vul je derde vak in: ')
+    
+
+    insertData = '''INSERT INTO studieplanB3(studentnummer,vak_1,vak_2,vak_3)
+    VALUES(?,?,?,?)''' 
+    cursor.execute(insertData, [(studentnummer),(vak_1),(vak_2),(vak_3)])
+    db.commit()
+
+
+#studiebehoefteB3()
+
+
+def studiebehoefteB4():
+    found = 0 
+    while found==0:
+        studentnummer = input('Vul je studentnummer in')   
+        with sqlite3.connect('studie.db') as db:
+            cursor = db.cursor()
+            find_user = ('SELECT * FROM studieplanB4 WHERE studentnummer = ?')
+            cursor.execute(find_user,[(studentnummer)])
+
+            if cursor.fetchall():
+                print('studentnummer is niet correct')
+            else:
+                found = 1 
+
+    vak_1 = input('Vul je eerste vak in: ')
+    vak_2 = input('Vul je tweede vak in:')
+    vak_3 = input('Vul je derde vak in: ')
+    
+
+    insertData = '''INSERT INTO studieplanB4(studentnummer,vak_1,vak_2,vak_3)
+    VALUES(?,?,?,?)''' 
+    cursor.execute(insertData, [(studentnummer),(vak_1),(vak_2),(vak_3)])
+    db.commit()
+
+
+#studiebehoefteB4()
 
 
 
