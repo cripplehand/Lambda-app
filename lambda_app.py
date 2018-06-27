@@ -112,13 +112,13 @@ get_minors()
 
 
 
-def studiebehoefte():
+def studiebehoefteB1():
     found = 0 
     while found==0:
         studentnummer = input('Vul je studentnummer in')   
         with sqlite3.connect('studie.db') as db:
             cursor = db.cursor()
-            find_user = ('SELECT * FROM studieplan WHERE studentnummer = ?')
+            find_user = ('SELECT * FROM studieplanB1 WHERE studentnummer = ?')
             cursor.execute(find_user,[(studentnummer)])
 
             if cursor.fetchall():
@@ -129,15 +129,15 @@ def studiebehoefte():
     vak_1 = input('Vul je eerste vak in: ')
     vak_2 = input('Vul je tweede vak in:')
     vak_3 = input('Vul je derde vak in: ')
-    blok = input('Vul het juiste blok in: ')
+    
 
-    insertData = '''INSERT INTO studieplan(studentnummer,vak_1,vak_2,vak_3,blok)
-    VALUES(?,?,?,?,?)''' 
-    cursor.execute(insertData, [(studentnummer),(vak_1),(vak_2),(vak_3),(blok)])
+    insertData = '''INSERT INTO studieplanB1(studentnummer,vak_1,vak_2,vak_3)
+    VALUES(?,?,?,?)''' 
+    cursor.execute(insertData, [(studentnummer),(vak_1),(vak_2),(vak_3)])
     db.commit()
 
 
-studiebehoefte()
+studiebehoefteB1()
 
 
 
