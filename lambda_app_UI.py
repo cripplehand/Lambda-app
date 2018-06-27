@@ -168,3 +168,12 @@ def overzicht_eind():
 Druk op enter om terug te keren naar het hoofd menu.
 +---------------------------------------------------------------------+
 """)
+
+
+def overzicht_eind():
+    print("""
+Druk op enter om terug te keren naar het hoofd menu.
++---------------------------------------------------------------------+
+""")
+
+# Maak nog een def waarin de gebruiker weet dat hij code van vak moet opgeven om plan op te zetten.
