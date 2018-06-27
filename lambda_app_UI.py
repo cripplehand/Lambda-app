@@ -128,4 +128,36 @@ def mainmenu_slb():
 Kies uit: 0,1,2,3,4 of 5
 +---------------------------------------------------------------------+
 """)
- 
+
+
+def menu_intern():
+        print("""
+
+
+            +----------------------------------------------+
+            |                                              |
+            |       In dit submenu kunt u kiezen uit:      |
+            |             Propedeuze vakken                |
+            |             IT-Service vakken                |
+            |       Business Intelligence vakken           |
+            |            IT-Development vakken             |
+            |                                              |
+            +----------------------------------------------+
+
++-------------------+    +-------------------+    +-------------------+
+|      Keuze 0      |    |      Keuze 1      |    |      Keuze 2      |
+|  Keer terug naar  |    | Propedeuze vakken |    | IT-Service vakken |
+|      Hoofdmenu    |    |                   |    |                   |
++-------------------+    +-------------------+    +-------------------+
+
++-------------------+    +-------------------+    +-------------------+
+|      Keuze 3      |    |      Keuze 4      |    |      Keuze 5      |
+|      Business     |    |   IT-Development  |    |       ???         |
+|Intelligence vakken|    |       vakken      |    |                   |
++-------------------+    +-------------------+    +-------------------+
+
+
+
+Kies uit: 0,1,2,3 of 4
++---------------------------------------------------------------------+
+""")
