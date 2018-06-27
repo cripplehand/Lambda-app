@@ -5,13 +5,14 @@
 # Imports
 import sqlite3
 from lambda_app_UI import * # Importeren menu's (UI)
-
+import os #  Opschoonen van de termianl
 
 # Program 
 
 # Groet gebruiker tot de applicatie.
 welcome()
 input()
+os.system('cls')
 # Login scherm
 login()
 # Valideren
