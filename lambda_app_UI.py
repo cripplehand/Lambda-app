@@ -170,10 +170,10 @@ Druk op enter om terug te keren naar het hoofd menu.
 """)
 
 
-def overzicht_eind():
+def overzicht_keuze():
     print("""
-Druk op enter om terug te keren naar het hoofd menu.
+Type in de code van het vak dat je wilt toevoegen, druk dan op enter.
 +---------------------------------------------------------------------+
 """)
 
-# Maak nog een def waarin de gebruiker weet dat hij code van vak moet opgeven om plan op te zetten.
+#  Vragen voor welk blok wordt in een print statement gevraagd in de main code.
