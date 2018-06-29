@@ -170,6 +170,29 @@ Druk op enter om terug te keren naar het hoofd menu.
 """)
 
 
+def overzicht_keuze_blok():
+    print("""
+
+
++-------------------+    +-------------------+    +-------------------+
+|      Keuze 0      |    |      Keuze 1      |    |      Keuze 2      |
+|  Keer terug naar  |    |  Blok 1 invoeren  |    |  Blok 2 invoeren  |
+|      Hoofdmenu    |    |   studiebehoefte  |    |   studiebehoefte  |
++-------------------+    +-------------------+    +-------------------+
+
++-------------------+    +-------------------+    +-------------------+
+|      Keuze 3      |    |      Keuze 4      |    |      Keuze 5      |
+|  Blok 3 invoeren  |    |  Blok 4 invoeren  |    |       ???         |
+|   studiebehoefte  |    |   studiebehoefte  |    |                   |
++-------------------+    +-------------------+    +-------------------+
+
+
+
+Kies uit: 0,1,2,3 of 4
++---------------------------------------------------------------------+
+""")
+
+
 def overzicht_keuze():
     print("""
 Type in de code van het vak dat je wilt toevoegen, druk dan op enter.
