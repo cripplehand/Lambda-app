@@ -74,7 +74,7 @@ def get_modulesprop():
         cursor.execute("SELECT * FROM modules_propedeuse  ")
         print(cursor.fetchall())
 
-get_modulesprop()
+#get_modulesprop()
 
 def get_modulesBI():
     with sqlite3.connect('studie.db') as db:
@@ -82,7 +82,7 @@ def get_modulesBI():
         cursor.execute("SELECT * FROM modules_BI  ")
         print(cursor.fetchall())
 
-get_modulesBI()
+#get_modulesBI()
 
 
 def get_modulesDEV():
@@ -91,7 +91,7 @@ def get_modulesDEV():
         cursor.execute("SELECT * FROM modules_DEV  ")
         print(cursor.fetchall())
 
-get_modulesDEV()
+#get_modulesDEV()
 
 
 def get_modulesSERV():
@@ -100,7 +100,7 @@ def get_modulesSERV():
         cursor.execute("SELECT * FROM modules_SERV  ")
         print(cursor.fetchall())
 
-get_modulesSERV()
+#get_modulesSERV()
 
 
 def get_minors():
@@ -109,7 +109,7 @@ def get_minors():
         cursor.execute("SELECT * FROM externe_modules ")
         print(cursor.fetchall())
 
-get_minors()
+#get_minors()
 
 
 
@@ -223,6 +223,43 @@ def studiebehoefteB4():
 #studiebehoefteB4()
 
 
+def viewB1():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM studieplanB1 ")
+        print(cursor.fetchall())
+
+#viewB1()
+
+
+def viewB2():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM studieplanB2 ")
+        print(cursor.fetchall())
+
+viewB2()
+
+
+def viewB3():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM studieplanB3 ")
+        print(cursor.fetchall())
+
+viewB3()
+
+
+def viewb4():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM studieplanB4 ")
+        print(cursor.fetchall())
+
+viewb4()
+
+
+
 
 ## Functie 0
 ### Afsluiten *
@@ -233,13 +270,13 @@ def studiebehoefteB4():
 ###Opvragen aanbod onderwijseenheden extern (1a) *
 ## Functie 3
 ###STUDENT ONLY:
-###        invullen studieboefte op basis van de onderwijseenheden die beschikbaar zijn (kenniselementen)
+###        invullen studieboefte op basis van de onderwijseenheden die beschikbaar zijn (kenniselementen) * 
 ## Functie 4
 ###STUDENT ONLY:
-###    (Indien) studiebehoefte niet volledig is, kan exterene kenniselkementen gezocht worden (minors/courses) (2)
+###    (Indien) studiebehoefte niet volledig is, kan exterene kenniselkementen gezocht worden (minors/courses) (2) * 
 ## Functie 5
 ###STUDENT ONLY:
-###    het verkrijgen van een overzicht van wat hij/zij wilt volgen in het komend blok. (3)
+###    het verkrijgen van een overzicht van wat hij/zij wilt volgen in het komend blok. (3) * 
 ## Functie 6
 ###SLB ONLY!:
 ###    goedkeuren/afkeuren voorlopige studiepad (4)
