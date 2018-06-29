@@ -179,7 +179,7 @@ Type in de code van het vak dat je wilt toevoegen, druk dan op enter.
 
 def overzicht_keuze_slb_keuze_keuring():
     print("""
-Kies het gewenste studieplan om te keuren.
+Type in de code van de student om zijn studieplan te keuren.
 +---------------------------------------------------------------------+
 """)
 
