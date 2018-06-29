@@ -260,6 +260,8 @@ viewb4()
 
 
 
+def goedkeuring():
+    
 
 ## Functie 0
 ### Afsluiten *
