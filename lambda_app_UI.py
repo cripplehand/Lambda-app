@@ -30,7 +30,7 @@ Druk op enter om naar het inlog scherm te gaan.
 """)
 
 
-def login():
+def login_msg():
     print("""
 
 
