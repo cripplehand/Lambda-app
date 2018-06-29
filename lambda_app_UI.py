@@ -176,4 +176,17 @@ Type in de code van het vak dat je wilt toevoegen, druk dan op enter.
 +---------------------------------------------------------------------+
 """)
 
+
+def overzicht_keuze_slb_keuze_keuring():
+    print("""
+Kies het gewenste studieplan om te keuren.
++---------------------------------------------------------------------+
+""")
+
+
+def overzicht_keuze_slb_keuring():
+    print("""
+Type in: "goedgekeurd" of "afgekeurd" om.
++---------------------------------------------------------------------+
+""")
 #  Vragen voor welk blok wordt in een print statement gevraagd in de main code.
