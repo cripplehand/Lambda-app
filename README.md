@@ -20,6 +20,7 @@
 2. Installeer ['Python3'](https://www.python.org/downloads/release/python-365/) (versie 3.6.5 of hoger).
    Voeg deze toe aan je PATH! Anders kan het programma niet via de CMD/CLI/Terminal worden opgestart.
 3. Via CMD/CLI/Terminal voer het bestand uit d.m.v. het volgende commando: `python Lambda-app.py` of in linux: `python3    Lambda-app.py`.
+   Door te dubbel klikken op de file zelf (Lambda-app.py) wordt het programma ook gestart.
 
 #### Design en structuur gemaakt door Wesley de Vree
 #### Techniek en code gemaakt door Camiel Frins
