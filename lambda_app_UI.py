@@ -84,11 +84,11 @@ def mainmenu_student():
 |                   |    | Onderwijseenheden |    | Onderwijseenheden |
 +-------------------+    +-------------------+    +-------------------+
 
-+-------------------+    +-------------------+    +-------------------+
-|      Keuze 3      |    |      Keuze 4      |    |      Keuze 5      |
-|  Toon Studieplan  |    |     Invoeren      |    | Invoeren externe  |
-|                   |    |  studiebehoefte   |    |  studiebehoefte   |
-+-------------------+    +-------------------+    +-------------------+
++-------------------+    +-------------------+ 
+|      Keuze 3      |    |      Keuze 4      | 
+|  Toon Studieplan  |    |     Invoeren      | 
+|                   |    |  studiebehoefte   | 
++-------------------+    +-------------------+ 
 
 
 

@@ -17,17 +17,13 @@ os.system('cls')
 login_msg()
 login()
 
+mainmenu_student()
+
 # Valideren
 ## Indien SLB = toon slb functies
 ## Indien STUDENT = toon student functies
 
-# Toon menu op basis van functies
-functie = int(input('kies uit student of SLB'))
-if functie() == student():
-    mainmenu_student()
-
-elif functie() == SLB():
-    mainmenu_slb
+# Toon menu op basis van functiesf
 
 
 

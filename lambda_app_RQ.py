@@ -5,6 +5,8 @@
 # Imports
 import sqlite3
 import os #  Opschoonen van de termianl
+from lambda_app_UI import * 
+
 
 def aanmaken_db():
     with sqlite3.connect('studie.db') as db:
@@ -41,6 +43,13 @@ def login():
         if results:
             for i in results:
                 print('Welkom '+i[2])
+                status = ('SELECT functie FROM gebruiker WHERE gebruikersnaam = ? AND wachtwoord = ?')
+                cursor.execute(find_user,[(gebruikersnaam),(wachtwoord)])
+                resultaten = cursor.fetchone()[6]
+                if resultaten == 'student':
+                   mainmenu_student()
+                elif resultaten == 'slb':
+                   mainmenu_slb()
             return ('Exit')
         else:
             print('gebruikersnaam en wachtwoord zijn niet correct')
@@ -49,6 +58,9 @@ def login():
                 print('doei')
                 time.sleep(1)
                 return('Exit')
+
+
+
 
 
 
@@ -241,9 +253,12 @@ def viewb4():
 
 
 
-def goedkeuring():
-	print("idk")
-    
+
+def goedkeuringB1():
+    studentnummer = input('Vul het juiste studentnummer in ')
+    'UPDATE studieplanB1 SET status = goedgekeurd WHERE studentnummer == input'
+
+#goedkeuringB1()
 
 ## Functie 0
 ### Afsluiten *
