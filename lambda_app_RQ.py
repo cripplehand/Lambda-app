@@ -49,6 +49,7 @@ def login():
                 if resultaten == 'student':
                    mainmenu_student()
                 elif resultaten == 'slb':
+                   print('hallo')
                    mainmenu_slb()
             return ('Exit')
         else:
@@ -59,8 +60,22 @@ def login():
                 time.sleep(1)
                 return('Exit')
 
+def mainmenu_student():
+    keuze = input("")
+    if keuze == 0:
+        exit
+    elif keuze == 1:
+        menu_intern()
+    elif keuze == 2:
+        get_minors()
+    elif keuze == 3:
+        keuze_blok()
+    elif keuze == 4:
+        keuze_blok()
+ 
+mainmenu_student()
 
-
+       
 
 
 
