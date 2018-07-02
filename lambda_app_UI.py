@@ -212,4 +212,10 @@ def overzicht_keuze_slb_keuring():
 Type in: "goedgekeurd" of "afgekeurd" om.
 +---------------------------------------------------------------------+
 """)
-#  Vragen voor welk blok wordt in een print statement gevraagd in de main code.
+
+
+def keuze_blok():
+    print("""
+Type in: "1,2,3 en 4" voor het kiezen van een blok.
++---------------------------------------------------------------------+
+""")
