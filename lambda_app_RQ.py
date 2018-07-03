@@ -48,18 +48,20 @@ def login():
                 resultaten = cursor.fetchone()[6]
                 if resultaten == 'student':
                    run = True
-                   mainmenu_student()
-                   keuze = input('maak je keuze: ')
-                   if keuze == '0':
-                      exit
-                   elif keuze == '1':
-                      menu_intern()
-                   elif keuze == '2':
-                      get_minors
-                   elif keuze == '3':
-                      keuze_blok()
-                   elif keuze == '4':
-                      overzicht_keuze_blok
+                   while run:
+
+                       mainmenu_student()
+                       keuze = input('maak je keuze: ')
+                       if keuze == '0':
+                          exit
+                       elif keuze == '1':
+                          menu_intern()
+                       elif keuze == '2':
+                          get_minors()
+                       elif keuze == '3':
+                          keuze_blok()
+                       elif keuze == '4':
+                          overzicht_keuze_blok
                        
                 elif resultaten == 'slb':
                    run = True
