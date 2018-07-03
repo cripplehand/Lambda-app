@@ -56,7 +56,8 @@ def login():
                        mainmenu_student()
                        keuze = input('maak je keuze: ')
                        if keuze == '0':
-                          exit
+                           run = False
+                           exit
                        elif keuze == '1':
                           menu_intern()
                           run_sub = True
@@ -110,55 +111,56 @@ def login():
                    run = True
                    mainmenu_slb()
                    keuze = input('maak je keuze: ')
-                   if keuze == '0':
-                       exit
-                   elif keuze == '1':
-                       menu_intern()
-                       run_sub = True
-                       while run_sub:
-                           keuze = input('maak je keuze: ')
-                           if keuze == '0':
-                               run_sub = False
-                           elif keuze == '1':
-                               get_modulesprop()
-                           elif keuze == '2':
-                               get_modulesSERV()
-                           elif keuze == '3':
-                               get_modulesBI()
-                           elif keuze == '4':
-                               get_modulesDEV()
-                   elif keuze == '2':
-                       get_minors()
-                   elif keuze == '3':
-                       keuze_blok()
-                       run_sub = True
-                       while run_sub:
-                           keuze = input('maak je keuze: ')
-                           if keuze == '0':
-                               run_sub = False
-                           elif keuze == '1':
-                               viewB1()
-                           elif keuze == '2':
-                               viewB2()
-                           elif keuze == '3':
-                               viewB3()
-                           elif keuze == '4':
-                               viewB4()
-                   elif keuze == '4':
-                       keuze_blok()
-                       run_sub = True
-                       while run_sub:
-                           keuze = input('maak je keuze: ')
-                           if keuze == '0':
-                               run_sub = False
-                           elif keuze == '1':
-                               goedkeuringB1()
-                           elif keuze == '2':
-                               goedkeuringB2()
-                           elif keuze == '3':
-                               goedkeuringB3()
-                           elif keuze == '4':
-                               goedkeuringB4()
+                   while run:
+                       if keuze == '0':
+                           run_sub = False
+                       elif keuze == '1':
+                           menu_intern()
+                           run_sub = True
+                           while run_sub:
+                               keuze = input('maak je keuze: ')
+                               if keuze == '0':
+                                   run_sub = False
+                               elif keuze == '1':
+                                   get_modulesprop()
+                               elif keuze == '2':
+                                   get_modulesSERV()
+                               elif keuze == '3':
+                                   get_modulesBI()
+                               elif keuze == '4':
+                                   get_modulesDEV()
+                       elif keuze == '2':
+                           get_minors()
+                       elif keuze == '3':
+                           keuze_blok()
+                           run_sub = True
+                           while run_sub:
+                               keuze = input('maak je keuze: ')
+                               if keuze == '0':
+                                   run_sub = False
+                               elif keuze == '1':
+                                   viewB1()
+                               elif keuze == '2':
+                                   viewB2()
+                               elif keuze == '3':
+                                   viewB3()
+                               elif keuze == '4':
+                                   viewB4()
+                       elif keuze == '4':
+                           keuze_blok()
+                           run_sub = True
+                           while run_sub:
+                               keuze = input('maak je keuze: ')
+                               if keuze == '0':
+                                   run_sub = False
+                               elif keuze == '1':
+                                   goedkeuringB1(studentnummer)
+                               elif keuze == '2':
+                                   goedkeuringB2()
+                               elif keuze == '3':
+                                   goedkeuringB3()
+                               elif keuze == '4':
+                                   goedkeuringB4()
 
             return ('Exit')
         else:
@@ -323,9 +325,18 @@ def viewB4():
 
 
 
-def goedkeuringB1():
-    studentnummer = input('Vul het juiste studentnummer in ')
-    'UPDATE studieplanB1 SET status = goedgekeurd WHERE studentnummer == input'
+def goedkeuringB1(studentnummer):
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+
+    studentnummer == input('vul het studentnummer in van de student: ')
+    status = input('keur het studieplan van blok 1 goed of af: ')
+    insertData = '''INSERT INTO studieplanB1 WHERE studentnummer == (status))
+    VALUES(?,?)''' 
+    cursor.execute(insertData, [(studentnummer),(status)])
+    db.commit()
+
+ 
 
 #goedkeuringB1()
 
