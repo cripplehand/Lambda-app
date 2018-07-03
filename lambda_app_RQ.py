@@ -7,7 +7,6 @@ import sqlite3
 import os #  Opschoonen van de termianl
 from lambda_app_UI import * 
 
-
 def aanmaken_db():
     with sqlite3.connect('studie.db') as db:
         cursor = db.cursor()
