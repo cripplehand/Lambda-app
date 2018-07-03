@@ -17,7 +17,7 @@ os.system('cls')
 login_msg()
 login()
 
-mainmenu_student()
+
 
 # Valideren
 ## Indien SLB = toon slb functies

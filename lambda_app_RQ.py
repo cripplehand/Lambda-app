@@ -47,10 +47,35 @@ def login():
                 cursor.execute(find_user,[(gebruikersnaam),(wachtwoord)])
                 resultaten = cursor.fetchone()[6]
                 if resultaten == 'student':
+                   run = True
                    mainmenu_student()
+                   keuze = input('maak je keuze: ')
+                   if keuze == '0':
+                      exit
+                   elif keuze == '1':
+                      menu_intern()
+                   elif keuze == '2':
+                      get_minors
+                   elif keuze == '3':
+                      keuze_blok()
+                   elif keuze == '4':
+                      overzicht_keuze_blok
+                       
                 elif resultaten == 'slb':
-                   print('hallo')
+                   run = True
                    mainmenu_slb()
+                   keuze = input('maak je keuze: ')
+                   if keuze == '0':
+                       exit
+                   elif keuze == '1':
+                       menu_intern()
+                   elif keuze == '2':
+                       get_minors()
+                   elif keuze == '3':
+                       keuze_blok()
+                   elif keuze == '4':
+                       overzicht_keuze_slb_keuring()
+
             return ('Exit')
         else:
             print('gebruikersnaam en wachtwoord zijn niet correct')
@@ -60,22 +85,7 @@ def login():
                 time.sleep(1)
                 return('Exit')
 
-def mainmenu_student():
-    keuze = input("")
-    if keuze == 0:
-        exit
-    elif keuze == 1:
-        menu_intern()
-    elif keuze == 2:
-        get_minors()
-    elif keuze == 3:
-        keuze_blok()
-    elif keuze == 4:
-        keuze_blok()
- 
-mainmenu_student()
 
-       
 
 
 
