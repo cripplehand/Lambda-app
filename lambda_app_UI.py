@@ -117,11 +117,11 @@ def mainmenu_slb():
 |                   |    | Onderwijseenheden |    | Onderwijseenheden |
 +-------------------+    +-------------------+    +-------------------+
 
-+-------------------+    +-------------------+    +-------------------+
-|      Keuze 3      |    |      Keuze 4      |    |      Keuze 5      |
-|       Tonen       |    |     Goedkeuren    |    |       ???         |
-|   Studieplannen   |    |   Studieplannen   |    |                   |
-+-------------------+    +-------------------+    +-------------------+
++-------------------+    +-------------------+   
+|      Keuze 3      |    |      Keuze 4      |   
+|       Tonen       |    |     Goedkeuren    |   
+|   Studieplannen   |    |   Studieplannen   |   
++-------------------+    +-------------------+   
 
 
 
@@ -150,11 +150,11 @@ def menu_intern():
 |      Hoofdmenu    |    |                   |    |                   |
 +-------------------+    +-------------------+    +-------------------+
 
-+-------------------+    +-------------------+    +-------------------+
-|      Keuze 3      |    |      Keuze 4      |    |      Keuze 5      |
-|      Business     |    |   IT-Development  |    |       ???         |
-|Intelligence vakken|    |       vakken      |    |                   |
-+-------------------+    +-------------------+    +-------------------+
++-------------------+    +-------------------+   
+|      Keuze 3      |    |      Keuze 4      |   
+|      Business     |    |   IT-Development  |   
+|Intelligence vakken|    |       vakken      |   
++-------------------+    +-------------------+   
 
 
 
@@ -180,11 +180,11 @@ def overzicht_keuze_blok():
 |      Hoofdmenu    |    |   studiebehoefte  |    |   studiebehoefte  |
 +-------------------+    +-------------------+    +-------------------+
 
-+-------------------+    +-------------------+    +-------------------+
-|      Keuze 3      |    |      Keuze 4      |    |      Keuze 5      |
-|  Blok 3 invoeren  |    |  Blok 4 invoeren  |    |       ???         |
-|   studiebehoefte  |    |   studiebehoefte  |    |                   |
-+-------------------+    +-------------------+    +-------------------+
++-------------------+    +-------------------+ 
+|      Keuze 3      |    |      Keuze 4      | 
+|  Blok 3 invoeren  |    |  Blok 4 invoeren  | 
+|   studiebehoefte  |    |   studiebehoefte  | 
++-------------------+    +-------------------+ 
 
 
 
