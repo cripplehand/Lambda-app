@@ -33,6 +33,8 @@ def aanmaken_db():
 
 def login():
     while True:
+        global gebruikersnaam
+        global wachtwoord
         gebruikersnaam = input('Vul u gebruikersnaam in: ')
         wachtwoord = input('Vul u wachtwoord in: ')
         with sqlite3.connect('studie.db') as db:
@@ -46,6 +48,9 @@ def login():
                 status = ('SELECT functie FROM gebruiker WHERE gebruikersnaam = ? AND wachtwoord = ?')
                 cursor.execute(find_user,[(gebruikersnaam),(wachtwoord)])
                 resultaten = cursor.fetchone()[6]
+                status = ('SELECT functie FROM gebruiker WHERE gebruikersnaam = ? AND wachtwoord = ?')
+                cursor.execute(find_user,[(gebruikersnaam),(wachtwoord)])
+                studentnummer = cursor.fetchone()[1]
                 if resultaten == 'student':
                    run = True
                    while run:
@@ -84,7 +89,7 @@ def login():
                               elif keuze == '3':
                                   viewB3()
                               elif keuze == '4':
-                                  viewB4
+                                  viewB4()
                        elif keuze == '4':
                           overzicht_keuze_blok()
                           run_sub = True
@@ -93,13 +98,13 @@ def login():
                               if keuze == '0':
                                   run_sub = False
                               elif keuze == '1':
-                                  studiebehoefteB1()
+                                  studiebehoefteB1(studentnummer)
                               elif keuze == '2':
-                                  studiebehoefteB2()
+                                  studiebehoefteB2(studentnummer)
                               elif keuze == '3':
-                                  studiebehoefteB3()
+                                  studiebehoefteB3(studentnummer)
                               elif keuze == '4':
-                                  studiebehoefteB4()
+                                  studiebehoefteB4(studentnummer)
                                       
                        
                 elif resultaten == 'slb':
@@ -214,19 +219,9 @@ def get_minors():
 
 
 
-def studiebehoefteB1():
-    found = 0 
-    while found==0:
-        studentnummer = input('Vul je studentnummer in')   
-        with sqlite3.connect('studie.db') as db:
-            cursor = db.cursor()
-            find_user = ('SELECT * FROM studieplanB1 WHERE studentnummer = ?')
-            cursor.execute(find_user,[(studentnummer)])
-
-            if cursor.fetchall():
-                print('studentnummer is niet correct')
-            else:
-                found = 1 
+def studiebehoefteB1(studentnummer):
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
 
     vak_1 = input('Vul je eerste vak in: ')
     vak_2 = input('Vul je tweede vak in:')
@@ -242,19 +237,9 @@ def studiebehoefteB1():
 #studiebehoefteB1()
 
 
-def studiebehoefteB2():
-    found = 0 
-    while found==0:
-        studentnummer = input('Vul je studentnummer in')   
-        with sqlite3.connect('studie.db') as db:
-            cursor = db.cursor()
-            find_user = ('SELECT * FROM studieplanB2 WHERE studentnummer = ?')
-            cursor.execute(find_user,[(studentnummer)])
-
-            if cursor.fetchall():
-                print('studentnummer is niet correct')
-            else:
-                found = 1 
+def studiebehoefteB2(studentnummer):
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
 
     vak_1 = input('Vul je eerste vak in: ')
     vak_2 = input('Vul je tweede vak in:')
@@ -268,19 +253,9 @@ def studiebehoefteB2():
 
 #studiebehoefteB2()
 
-def studiebehoefteB3():
-    found = 0 
-    while found==0:
-        studentnummer = input('Vul je studentnummer in')   
-        with sqlite3.connect('studie.db') as db:
-            cursor = db.cursor()
-            find_user = ('SELECT * FROM studieplanB3 WHERE studentnummer = ?')
-            cursor.execute(find_user,[(studentnummer)])
-
-            if cursor.fetchall():
-                print('studentnummer is niet correct')
-            else:
-                found = 1 
+def studiebehoefteB3(studentnummer):
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
 
     vak_1 = input('Vul je eerste vak in: ')
     vak_2 = input('Vul je tweede vak in:')
@@ -296,19 +271,9 @@ def studiebehoefteB3():
 #studiebehoefteB3()
 
 
-def studiebehoefteB4():
-    found = 0 
-    while found==0:
-        studentnummer = input('Vul je studentnummer in')   
-        with sqlite3.connect('studie.db') as db:
-            cursor = db.cursor()
-            find_user = ('SELECT * FROM studieplanB4 WHERE studentnummer = ?')
-            cursor.execute(find_user,[(studentnummer)])
-
-            if cursor.fetchall():
-                print('studentnummer is niet correct')
-            else:
-                found = 1 
+def studiebehoefteB4(studentnummer):
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
 
     vak_1 = input('Vul je eerste vak in: ')
     vak_2 = input('Vul je tweede vak in:')
