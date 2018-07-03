@@ -154,7 +154,8 @@ def login():
                                if keuze == '0':
                                    run_sub = False
                                elif keuze == '1':
-                                   goedkeuringB1(studentnummer)
+                                   goedkeuringB1()
+                                   run_sub = False
                                elif keuze == '2':
                                    goedkeuringB2()
                                elif keuze == '3':
@@ -325,20 +326,62 @@ def viewB4():
 
 
 
-def goedkeuringB1(studentnummer):
-    with sqlite3.connect('studie.db') as db:
-        cursor = db.cursor()
+#def goedkeuringB1(studentnummer):
+    #with sqlite3.connect('studie.db') as db:
+        #cursor = db.cursor()
 
-    studentnummer == input('vul het studentnummer in van de student: ')
-    status = input('keur het studieplan van blok 1 goed of af: ')
-    insertData = '''INSERT INTO studieplanB1 WHERE studentnummer == (status))
-    VALUES(?,?)''' 
-    cursor.execute(insertData, [(studentnummer),(status)])
-    db.commit()
+   # studentnummer == input('vul het studentnummer in van de student: ')
+    #status = input('keur het studieplan van blok 1 goed of af: ')
+    #insertData = '''INSERT INTO studieplanB1 (status) WHERE studentnummer == studentnummer
+    #VALUES(?)''' 
+    #cursor.execute(insertData, (status))
+    #db.commit()
 
  
 
 #goedkeuringB1()
+
+def goedkeuringB1():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+
+    studentnummer = input('wat is het studentnummer: ')
+    status = input('keur het studieplan van blok 1 goed of af: ')
+    cursor.execute("UPDATE studieplanB1 SET status=(?) WHERE studentnummer = (?)", (status, studentnummer))
+    db.commit()
+
+
+
+def goedkeuringB2():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+
+    studentnummer = input('wat is het studentnummer: ')
+    status = input('keur het studieplan van blok 2 goed of af: ')
+    cursor.execute("UPDATE studieplanB2 SET status=(?) WHERE studentnummer = (?)", (status, studentnummer))
+    db.commit()
+
+
+def goedkeuringB3():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+
+    studentnummer = input('wat is het studentnummer: ')
+    status = input('keur het studieplan van blok 3 goed of af: ')
+    cursor.execute("UPDATE studieplanB3 SET status=(?) WHERE studentnummer = (?)", (status, studentnummer))
+    db.commit()
+
+
+
+def goedkeuringB4():
+    with sqlite3.connect('studie.db') as db:
+        cursor = db.cursor()
+
+    studentnummer = input('wat is het studentnummer: ')
+    status = input('keur het studieplan van blok 4 goed of af: ')
+    cursor.execute("UPDATE studieplanB4 SET status=(?) WHERE studentnummer = (?)", (status, studentnummer))
+    db.commit()
+
 
 ## Functie 0
 ### Afsluiten *
