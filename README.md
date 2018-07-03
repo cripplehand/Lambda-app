@@ -24,7 +24,7 @@
    
 ## Inlog gegeven!
 | Inlognaam | Wachtwoord | Rol     |
-|------------------------|---------|
+|-----------|------------|---------|
 | wesley1   | python     | STUDENT |
 | isolh     | vogel      | SLB     |
 
