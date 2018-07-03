@@ -22,7 +22,7 @@
 3. Via CMD/CLI/Terminal voer het bestand uit d.m.v. het volgende commando: `python Lambda-app.py` of in linux: `python3    Lambda-app.py`.
    Door te dubbel klikken op de file zelf (Lambda-app.py) wordt het programma ook gestart.
    
-## Inlog gegeven!
+## Inlog gegevens
 | Inlognaam | Wachtwoord | Rol     |
 |-----------|------------|---------|
 | wesley1   | python     | STUDENT |
