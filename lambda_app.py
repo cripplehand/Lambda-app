@@ -16,4 +16,3 @@ os.system('cls')
 # Login scherm
 login_msg()
 login()
-
