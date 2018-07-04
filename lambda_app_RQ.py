@@ -60,7 +60,6 @@ def login():
                     while run:
                         mainmenu_student()
                         keuze = input('maak je keuze: ')
-                        print(keuze)
                         if keuze == '0':
                             run = False
                             exit
@@ -80,8 +79,8 @@ def login():
                                 elif keuze == '4':
                                     get_modulesDEV()
                         elif keuze == '2':
-                            print('hallo1')
                             get_minors()
+                            input()
                         elif keuze == '3':
                             keuze_blok()
                             run_sub = True
@@ -137,6 +136,8 @@ def login():
                                     get_modulesDEV()
                         elif keuze == '2':
                             get_minors()
+                            input()
+                            os.system('cls')
                         elif keuze == '3':
                             keuze_blok()
                             run_sub = True
@@ -216,7 +217,6 @@ def get_modulesSERV():
 
 
 def get_minors():
-    print('hallo')
     with sqlite3.connect('studie.db') as db:
         cursor = db.cursor()
         cursor.execute("SELECT * FROM externe_modules ")
