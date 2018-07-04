@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Conform PEP8 http://pep8online.com/
 
@@ -84,11 +85,11 @@ def mainmenu_student():
 |                   |    | Onderwijseenheden |    | Onderwijseenheden |
 +-------------------+    +-------------------+    +-------------------+
 
-+-------------------+    +-------------------+ 
-|      Keuze 3      |    |      Keuze 4      | 
-|  Toon Studieplan  |    |     Invoeren      | 
-|                   |    |  studiebehoefte   | 
-+-------------------+    +-------------------+ 
++-------------------+    +-------------------+
+|      Keuze 3      |    |      Keuze 4      |
+|  Toon Studieplan  |    |     Invoeren      |
+|                   |    |  studiebehoefte   |
++-------------------+    +-------------------+
 
 
 
@@ -117,11 +118,11 @@ def mainmenu_slb():
 |                   |    | Onderwijseenheden |    | Onderwijseenheden |
 +-------------------+    +-------------------+    +-------------------+
 
-+-------------------+    +-------------------+   
-|      Keuze 3      |    |      Keuze 4      |   
-|       Tonen       |    |     Goedkeuren    |   
-|   Studieplannen   |    |   Studieplannen   |   
-+-------------------+    +-------------------+   
++-------------------+    +-------------------+
+|      Keuze 3      |    |      Keuze 4      |
+|       Tonen       |    |     Goedkeuren    |
+|   Studieplannen   |    |   Studieplannen   |
++-------------------+    +-------------------+
 
 
 
@@ -131,7 +132,7 @@ Kies uit: 0,1,2,3,4 of 5
 
 
 def menu_intern():
-        print("""
+    print("""
 
 
             +----------------------------------------------+
@@ -150,11 +151,11 @@ def menu_intern():
 |      Hoofdmenu    |    |                   |    |                   |
 +-------------------+    +-------------------+    +-------------------+
 
-+-------------------+    +-------------------+   
-|      Keuze 3      |    |      Keuze 4      |   
-|      Business     |    |   IT-Development  |   
-|Intelligence vakken|    |       vakken      |   
-+-------------------+    +-------------------+   
++-------------------+    +-------------------+
+|      Keuze 3      |    |      Keuze 4      |
+|      Business     |    |   IT-Development  |
+|Intelligence vakken|    |       vakken      |
++-------------------+    +-------------------+
 
 
 
@@ -180,11 +181,11 @@ def overzicht_keuze_blok():
 |      Hoofdmenu    |    |   studiebehoefte  |    |   studiebehoefte  |
 +-------------------+    +-------------------+    +-------------------+
 
-+-------------------+    +-------------------+ 
-|      Keuze 3      |    |      Keuze 4      | 
-|  Blok 3 invoeren  |    |  Blok 4 invoeren  | 
-|   studiebehoefte  |    |   studiebehoefte  | 
-+-------------------+    +-------------------+ 
++-------------------+    +-------------------+
+|      Keuze 3      |    |      Keuze 4      |
+|  Blok 3 invoeren  |    |  Blok 4 invoeren  |
+|   studiebehoefte  |    |   studiebehoefte  |
++-------------------+    +-------------------+
 
 
 

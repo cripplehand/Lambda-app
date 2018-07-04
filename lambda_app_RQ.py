@@ -40,19 +40,19 @@ def login():
         wachtwoord = input('Vul u wachtwoord in: ')
         with sqlite3.connect('studie.db') as db:
             cursor = db.cursor()
-        find_user = (
-            'SELECT * FROM gebruiker WHERE gebruikersnaam = ? AND wachtwoord = ?')
+        find_user = ("""SELECT *
+        FROM gebruiker WHERE gebruikersnaam = ? AND wachtwoord = ?""")
         cursor.execute(find_user, [(gebruikersnaam), (wachtwoord)])
         results = cursor.fetchall()
         if results:
             for i in results:
                 print('Welkom ' + i[2])
-                status = (
-                    'SELECT functie FROM gebruiker WHERE gebruikersnaam = ? AND wachtwoord = ?')
+                status = ("""SELECT functie FROM gebruiker
+                WHERE gebruikersnaam = ? AND wachtwoord = ?""")
                 cursor.execute(find_user, [(gebruikersnaam), (wachtwoord)])
                 resultaten = cursor.fetchone()[6]
-                status = (
-                    'SELECT functie FROM gebruiker WHERE gebruikersnaam = ? AND wachtwoord = ?')
+                status = ("""SELECT functie FROM gebruiker
+                WHERE gebruikersnaam = ? AND wachtwoord = ?""")
                 cursor.execute(find_user, [(gebruikersnaam), (wachtwoord)])
                 studentnummer = cursor.fetchone()[1]
                 if resultaten == 'student':
@@ -321,20 +321,6 @@ def viewB4():
         cursor.execute("SELECT * FROM studieplanB4 ")
         print(cursor.fetchall())
 
-
-# def goedkeuringB1(studentnummer):
-    # with sqlite3.connect('studie.db') as db:
-        #cursor = db.cursor()
-
-   # studentnummer == input('vul het studentnummer in van de student: ')
-    #status = input('keur het studieplan van blok 1 goed of af: ')
-    # insertData = '''INSERT INTO studieplanB1 (status) WHERE studentnummer == studentnummer
-    # VALUES(?)'''
-    #cursor.execute(insertData, (status))
-    # db.commit()
-
-
-# goedkeuringB1()
 
 def goedkeuringB1():
     with sqlite3.connect('studie.db') as db:
